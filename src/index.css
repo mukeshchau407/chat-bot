@@ -78,6 +78,8 @@ body{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    height: 450px;
+    margin-bottom: 82px;
     padding: 25px 22px;
     height: 460px;
     overflow: auto;
@@ -139,6 +141,11 @@ body{
     background: #fff;
     border-radius: 32px;
     outline: 1px solid #cccce5;
+    box-shadow: 0 0 0 0.06;
+}
+
+.chat-footer .chat-form:focus-within{
+    outline: 2px solid #6D4FC2;
 }
 
 .chat-form .message-input{
@@ -147,7 +154,7 @@ body{
     width: 100%;
     background: none;
     height: 47px;
-    padding: 0 74px;
+    padding: 0 17px;
     font-size: 0.95rem;
 }
 
@@ -155,6 +162,7 @@ body{
     height: 35px;
     width: 35px;
     border: none;
+    display: none;
     outline: none;
     cursor: pointer;
     font-size: 1.15rem;
@@ -168,4 +176,9 @@ body{
 
 .chat-form button:hover{
     background: #593bab;
+} 
+
+.chat-form .message-input:valid~button{
+    display: block;
+
 }
