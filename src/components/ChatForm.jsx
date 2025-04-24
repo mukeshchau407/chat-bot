@@ -1,4 +1,6 @@
-const ChatForm = () => {
+import { useRef } from 'react';
+
+const ChatForm = ({setChatHistory}) => {
 
     const inputRef = useRef();
 
@@ -8,8 +10,8 @@ const ChatForm = () => {
         if(!userMassage) return;
         inputRef.current.value = "";
 
-        console.log(userMassage);
-    }
+        setChatHistory((history) =>[...history, {role: "user", text: userMassage}]);
+    };
 
   return (
 <form action="#" className="chat-form" onSubmit={handleFormSubmit}>
