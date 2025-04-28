@@ -6,7 +6,9 @@ import ChatMessage from "./components/ChatMessage";
 const App = () => {
   const [chatHistory, setChatHistory] = useState([]);
 
-  const generateBotResponse = () => {};
+  const generateBotResponse = (history) => {
+    console.log(history);
+  };
 
   return (
     <div className="container">
